@@ -1,4 +1,5 @@
 #include<iostream>
+using namespace std;
 /*
 void imprimir_tablero(std::string tablero){
     for(char &x : tablero){
@@ -32,13 +33,13 @@ std::string eliminar_elemento(std::string elemento_eliminado, std::string &table
 }
 */
 int main(){
-    std::string jugador1,jugador2;
+    string jugador1,jugador2;
     bool juego = true;
-    std::string tablero = "1,2,3;4,5,6,7,8;9,10,11,12,13,14,15";
-    std::cout<<"INGRESE EL NOMBRE DEL JUGADOR 1"<<std::endl;
-    std::cin>>jugador1;
-    std::cout<<"INGRESE EL NOMBRE DEL JUGADOR 2"<<std::endl;
-    std::cin>>jugador2;
+    string tablero = "1,2,3;4,5,6,7,8;9,10,11,12,13,14,15";
+    cout<<"INGRESE EL NOMBRE DEL JUGADOR 1"<<std::endl;
+    cin>>jugador1;
+    cout<<"INGRESE EL NOMBRE DEL JUGADOR 2"<<std::endl;
+    cin>>jugador2;
 
     char tablero_real [4][8] = {{'0','1','2','3','4','5','6','7'},{'1',' ',' ','|','|','|',' ',' '},{'2',' ','|','|','|','|','|',' '},{'3','|','|','|','|','|','|','|'}};
 
@@ -49,12 +50,12 @@ int main(){
         {
             for (size_t j = 0; j < 8; j++)
             {
-                std::cout<<tablero_real[i][j]<<" ";
+                cout<<tablero_real[i][j]<<" ";
             }
-            std::cout<<std::endl;
+            cout<<std::endl;
         }
 
-        std::cin>>opcion;
+        cin>>opcion;
 
         juego = false;
     }
